@@ -226,6 +226,7 @@
     "yarn": "^1.12.3"
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.17.1",
     "@fortawesome/fontawesome-free": "^5.5.0",
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
