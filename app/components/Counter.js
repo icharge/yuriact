@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@blueprintjs/core';
+
 import styles from './Counter.css';
 import routes from '../constants/routes';
 
@@ -42,6 +44,8 @@ export default class Counter extends Component<Props> {
           >
             <i className="fa fa-plus" />
           </button>
+          <Button intent="success" text="button content" onClick={increment} />
+
           <button
             className={styles.btn}
             onClick={decrement}
