@@ -15,4 +15,7 @@ function configureStore(initialState?: counterStateType) {
   return createStore(rootReducer, initialState, enhancer);
 }
 
-export default { configureStore, history };
+export default {
+  configureStore,
+  history,
+};

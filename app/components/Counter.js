@@ -11,7 +11,7 @@ type Props = {
   incrementIfOdd: () => void,
   incrementAsync: () => void,
   decrement: () => void,
-  counter: number
+  counter: number,
 };
 
 export default class Counter extends Component<Props> {
@@ -23,7 +23,7 @@ export default class Counter extends Component<Props> {
       incrementIfOdd,
       incrementAsync,
       decrement,
-      counter
+      counter,
     } = this.props;
     return (
       <div>
