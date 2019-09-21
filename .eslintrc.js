@@ -93,7 +93,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'configs/webpack.config.eslint.js',
+        config: './configs/webpack.config.eslint.js',
       },
     },
   },
