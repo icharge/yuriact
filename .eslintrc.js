@@ -90,11 +90,11 @@ module.exports = {
     'object-property-newline': 'error',
     'react/prefer-stateless-function': 0,
   },
-  settings: {
+  /* settings: {
     'import/resolver': {
       webpack: {
         config: './configs/webpack.config.eslint.js',
       },
     },
-  },
+  }, */
 };
