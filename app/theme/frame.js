@@ -1,5 +1,7 @@
 import React from 'react';
 import borderTopLeft from 'assets/images/border-top-left.png';
+import borderTop from 'assets/images/border-top.png';
+import borderTopRight from 'assets/images/border-top-right.png';
 
 type Props = {
   children: React.ReactChildren,
@@ -13,16 +15,8 @@ class Frame extends React.Component<Props> {
       <>
         <div className="row top">
           <img className="left" src={borderTopLeft} alt="" />
-          <img
-            className="center"
-            src="../../../assets/images/border-top.png"
-            alt=""
-          />
-          <img
-            className="right"
-            src="../../../assets/images/border-top-right.png"
-            alt=""
-          />
+          <img className="center" src={borderTop} alt="" />
+          <img className="right" src={borderTopRight} alt="" />
         </div>
         {/* <ng-content select="header"></ng-content> */}
         {/* <ng-content select="navbar"></ng-content> */}
