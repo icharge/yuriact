@@ -35,6 +35,7 @@ export default {
    */
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
+    modules: ['node_modules', 'app'],
   },
 
   plugins: [
