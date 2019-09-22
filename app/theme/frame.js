@@ -1,10 +1,12 @@
-import React from 'react';
+// @flow
+import React, { ReactNode } from 'react';
+// import type { ReactNode } from 'react';
 import borderTopLeft from 'assets/images/border-top-left.png';
 import borderTop from 'assets/images/border-top.png';
 import borderTopRight from 'assets/images/border-top-right.png';
 
 type Props = {
-  children: React.ReactChildren,
+  children: ReactNode,
 };
 
 class Frame extends React.Component<Props> {
@@ -12,7 +14,7 @@ class Frame extends React.Component<Props> {
     const { children } = this.props;
 
     return (
-      <>
+      <React.Fragment>
         <div className="row top">
           <img className="left" src={borderTopLeft} alt="" />
           <img className="center" src={borderTop} alt="" />
@@ -23,9 +25,7 @@ class Frame extends React.Component<Props> {
         <div className="row middle">
           <div className="left" />
           <div className="center">
-            <div className="content">
-              {/* <ng-content select="router-outlet" /> */}
-            </div>
+            <div className="content">{children}</div>
           </div>
           <div className="right" />
         </div>
@@ -34,7 +34,7 @@ class Frame extends React.Component<Props> {
           <div className="center" />
           <div className="right" />
         </div>
-      </>
+      </React.Fragment>
     );
   }
 }
