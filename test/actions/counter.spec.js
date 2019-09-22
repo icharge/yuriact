@@ -14,15 +14,23 @@ describe('actions', () => {
     const fn = actions.incrementIfOdd();
     expect(fn).toBeInstanceOf(Function);
     const dispatch = spy();
-    const getState = () => ({ counter: 1 });
+    const getState = () => ({
+      counter: 1,
+    });
     fn(dispatch, getState);
-    expect(dispatch.calledWith({ type: actions.INCREMENT_COUNTER })).toBe(true);
+    expect(
+      dispatch.calledWith({
+        type: actions.INCREMENT_COUNTER,
+      }),
+    ).toBe(true);
   });
 
   it('should incrementIfOdd shouldnt create increment action if counter is even', () => {
     const fn = actions.incrementIfOdd();
     const dispatch = spy();
-    const getState = () => ({ counter: 2 });
+    const getState = () => ({
+      counter: 2,
+    });
     fn(dispatch, getState);
     expect(dispatch.called).toBe(false);
   });
@@ -35,7 +43,7 @@ describe('actions', () => {
     fn(dispatch);
     setTimeout(() => {
       expect(dispatch.calledWith({ type: actions.INCREMENT_COUNTER })).toBe(
-        true
+        true,
       );
       done();
     }, 5);

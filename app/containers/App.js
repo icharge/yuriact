@@ -1,8 +1,9 @@
 // @flow
 import * as React from 'react';
+import Frame from 'theme/frame';
 
 type Props = {
-  children: React.Node
+  children: React.Node,
 };
 
 export default class App extends React.Component<Props> {
@@ -10,6 +11,10 @@ export default class App extends React.Component<Props> {
 
   render() {
     const { children } = this.props;
-    return <React.Fragment>{children}</React.Fragment>;
+    return (
+      <React.Fragment>
+        <Frame>{children}</Frame>
+      </React.Fragment>
+    );
   }
 }

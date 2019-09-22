@@ -6,21 +6,23 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Counter from '../../app/components/Counter';
 
-Enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({
+  adapter: new Adapter(),
+});
 
 function setup() {
   const actions = {
     increment: spy(),
     incrementIfOdd: spy(),
     incrementAsync: spy(),
-    decrement: spy()
+    decrement: spy(),
   };
   const component = shallow(<Counter counter={1} {...actions} />);
   return {
     component,
     actions,
     buttons: component.find('button'),
-    p: component.find('.counter')
+    p: component.find('.counter'),
   };
 }
 

@@ -29,7 +29,7 @@ test('should open window', async t => {
 
 test(
   "should haven't any logs in console of main window",
-  assertNoConsoleErrors
+  assertNoConsoleErrors,
 );
 
 test('should to Counter with click "to Counter" link', async t => {
@@ -44,8 +44,8 @@ test('should navgiate to /counter', async t => {
   await t
     .click(
       ReactSelector('Link').withProps({
-        to: '/counter'
-      })
+        to: '/counter',
+      }),
     )
     .expect(getPageUrl())
     .contains('/counter');

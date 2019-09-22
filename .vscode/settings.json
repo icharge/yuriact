@@ -12,7 +12,7 @@
   },
 
   "javascript.validate.enable": false,
-  "javascript.format.enable": false,
+  // "javascript.format.enable": false,
   "typescript.validate.enable": false,
   "typescript.format.enable": false,
 
@@ -31,5 +31,6 @@
     "npm-debug.log.*": true,
     "test/**/__snapshots__": true,
     "yarn.lock": true
-  }
+  },
+  "eslint.enable": true
 }

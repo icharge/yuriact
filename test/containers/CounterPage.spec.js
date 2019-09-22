@@ -7,7 +7,9 @@ import { ConnectedRouter } from 'connected-react-router';
 import CounterPage from '../../app/containers/CounterPage';
 import { configureStore } from '../../app/store/configureStore';
 
-Enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({
+  adapter: new Adapter(),
+});
 
 function setup(initialState) {
   const store = configureStore(initialState);
@@ -23,7 +25,7 @@ function setup(initialState) {
   return {
     app,
     buttons: app.find('button'),
-    p: app.find('.counter')
+    p: app.find('.counter'),
   };
 }
 
@@ -53,7 +55,9 @@ describe('containers', () => {
     });
 
     it('should change if odd and if odd button clicked', () => {
-      const { buttons, p } = setup({ counter: 1 });
+      const { buttons, p } = setup({
+        counter: 1,
+      });
       buttons.at(2).simulate('click');
       expect(p.text()).toMatch(/^2$/);
     });
