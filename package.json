@@ -243,6 +243,7 @@
     "redux": "^4.0.1",
     "redux-saga": "^1.0.5",
     "redux-thunk": "^2.3.0",
+    "reflexbox": "^3.0.1",
     "source-map-support": "^0.5.9"
   },
   "devEngines": {
