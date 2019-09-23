@@ -89,6 +89,7 @@ module.exports = {
     ],
     'object-property-newline': 'error',
     'react/prefer-stateless-function': 0,
+    'linebreak-style': 0,
   },
   settings: {
     'import/resolver': {
@@ -96,8 +97,8 @@ module.exports = {
         config: './configs/webpack.config.eslint.js',
       }, */
       node: {
-        moduleDirectory: ['node_modules', 'app/']
-      }
+        moduleDirectory: ['node_modules', 'app/'],
+      },
     },
   },
 };
