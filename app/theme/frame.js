@@ -5,6 +5,8 @@ import borderTopLeft from 'assets/images/border-top-left.png';
 import borderTop from 'assets/images/border-top.png';
 import borderTopRight from 'assets/images/border-top-right.png';
 
+import 'assets/styles/window-style.scss';
+
 type Props = {
   children: ReactNode,
 };
@@ -14,8 +16,8 @@ class Frame extends React.Component<Props> {
     const { children } = this.props;
 
     return (
-      <React.Fragment>
-        <div className="row top">
+      <div className="window-frame">
+        <div className="row top window-draggable-zone">
           <img className="left" src={borderTopLeft} alt="" />
           <img className="center" src={borderTop} alt="" />
           <img className="right" src={borderTopRight} alt="" />
@@ -34,7 +36,7 @@ class Frame extends React.Component<Props> {
           <div className="center" />
           <div className="right" />
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

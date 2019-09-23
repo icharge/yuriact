@@ -1,11 +1,14 @@
 // @flow
 import React from 'react';
 
-type Props = {};
+type Props = {
+  children: React.ReactDOM,
+};
 
 class View extends React.Component<Props> {
   render() {
-    return <></>;
+    const { children } = this.props;
+    return <>{children}</>;
   }
 }
 
