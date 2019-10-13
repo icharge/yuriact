@@ -10,9 +10,26 @@ export default class LoginPage extends React.Component<Props> {
 
   render() {
     return (
-      <Container fluid>
-        <Row justify="center">
-          <Col xs={12} md={6}>
+      <Container
+        fluid
+        style={{
+          height: '100%',
+        }}
+      >
+        <Row
+          justify="center"
+          style={{
+            height: '100%',
+          }}
+        >
+          <Col
+            xs={12}
+            md={6}
+            style={{
+              margin: 'auto',
+              marginLeft: 'auto !important', // TODO: Use SCSS
+            }}
+          >
             <Card>
               <H5>YuriNET</H5>
               <p>Welcome back</p>

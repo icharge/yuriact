@@ -13,10 +13,6 @@ export default class App extends React.Component<Props> {
 
   render() {
     const { children } = this.props;
-    return (
-      <>
-        <div>{children}</div>
-      </>
-    );
+    return <>{children}</>;
   }
 }
