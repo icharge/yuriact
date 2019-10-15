@@ -10,35 +10,28 @@ export default class LoginPage extends React.Component<Props> {
 
   render() {
     return (
-      <Container
-        fluid
-        style={{
-          height: '100%',
-        }}
-      >
-        <Row
-          justify="center"
+      <Card>
+        <Container
+          fluid
           style={{
             height: '100%',
           }}
         >
-          <Col
-            xs={12}
-            md={6}
+          <Row
+            justify="center"
             style={{
-              margin: 'auto',
-              marginLeft: 'auto !important', // TODO: Use SCSS
+              height: '100%',
             }}
           >
-            <Card>
+            <Col xs={12}>
               <H5>YuriNET</H5>
               <p>Welcome back</p>
               <Button>Login</Button>
               <Button>Quit</Button>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      </Card>
     );
   }
 }
