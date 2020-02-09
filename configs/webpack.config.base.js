@@ -12,37 +12,40 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
+            }
           },
-        },
-      },
-    ],
+          'ts-loader'
+        ]
+      }
+    ]
   },
 
   output: {
     path: path.join(__dirname, '..', 'app'),
     // https://github.com/webpack/webpack/issues/1114
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2'
   },
 
   /**
    * Determine the array of extensions that should be used to resolve modules.
    */
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    modules: ['node_modules', 'app'],
+    extensions: ['.js', '.ts', '.tsx', '.json'],
+    modules: ['node_modules', 'app']
   },
 
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'production',
+      NODE_ENV: 'production'
     }),
 
-    new webpack.NamedModulesPlugin(),
-  ],
+    new webpack.NamedModulesPlugin()
+  ]
 };
